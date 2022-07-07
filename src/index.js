@@ -35,7 +35,20 @@ function addRamen(e){
         comment: newRamenForm["new-comment"].value,
     }
     renderRamen(newRamen)
+    postRamen(newRamen)
     newRamenForm.reset()
+}
+
+function postRamen(newRamen){
+fetch(URL+"ramens", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(newRamen)
+})
+.then(r => r.json())
+.then(ramen => console.log (ramen))
 }
 
 
