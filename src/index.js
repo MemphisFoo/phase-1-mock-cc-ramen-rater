@@ -15,8 +15,8 @@ ramenMenu.append(ramenImg)
 }
 
 function showRamen(dish) {
-    let ramenDetailImg = document.querySelector(".detail-image")
-    let ramenName = document.querySelector(".name")
+    let ramenDetailImg = document.querySelector(".detail-image") // document.querySelector(".detail-image").src=dish.image
+    let ramenName = document.querySelector(".name") // document.querySelector(".detail-image").textContent=dish.name
     let ramenRest = document.querySelector(".restaurant")
     ramenDetailImg.src = dish.image
     ramenName.textContent = dish.name
